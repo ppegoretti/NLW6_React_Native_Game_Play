@@ -5,7 +5,7 @@ import { styles } from './styles';
 import IllustrationImg from '../../assets/illustration.png'
 import { ButtonIcon } from '../../components/ButtonIcon/Index';
 
-export function SignIn() {
+export function Home() {
   return (
     <View style={styles.container}>
 
