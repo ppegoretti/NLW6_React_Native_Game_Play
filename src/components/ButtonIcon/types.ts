@@ -1,5 +1,6 @@
-import { TouchableOpacityProps } from "react-native";
 
-export type ButtonIconProps = TouchableOpacityProps & {
+import { RectButtonProps } from "react-native-gesture-handler";
+
+export type ButtonIconProps = RectButtonProps & {
   title: string;
 }
