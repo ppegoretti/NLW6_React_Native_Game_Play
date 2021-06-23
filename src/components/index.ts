@@ -1,3 +1,5 @@
 export { Background } from './Background'
 export { ButtonIcon } from './ButtonIcon'
 export { Profile } from './Profile'
+export { ButtonAdd } from './ButtonAdd'
+export { CategorySelect } from './CategorySelect'
