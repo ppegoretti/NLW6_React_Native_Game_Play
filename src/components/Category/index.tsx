@@ -12,7 +12,7 @@ import { theme } from '../../global/styles/theme'
 export function Category({
   title,
   icon: Icon,
-  checked = false,
+  checked = true,
   ...rest
 }: CategoryProps) {
   const { secondary50, secondary70 } = theme.colors
@@ -22,9 +22,8 @@ export function Category({
         style={styles.container}
         colors={[secondary50, secondary70]}>
         <View style={[styles.content, { opacity: checked ? 1 : 0.4 }]}>
-          <View style={checked ? styles.checked : styles.check}>
-            <Icon width={48} height={48} />
-          </View>
+          <View style={checked ? styles.checked : styles.check} />
+          <Icon width={48} height={48} />
           <Text style={styles.title}>
             {title}
           </Text>

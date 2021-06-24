@@ -9,7 +9,7 @@ import { Category } from '../Category'
 import { CategorySelectProps } from './types'
 
 
-export function CategorySelect({ categorySelected }: CategorySelectProps) {
+export function CategorySelect({ categorySelected, setCategory }: CategorySelectProps) {
   const { secondary80, secondary100 } = theme.colors
   return (
     <ScrollView
@@ -25,6 +25,7 @@ export function CategorySelect({ categorySelected }: CategorySelectProps) {
             title={category.title}
             icon={category.icon}
             checked={category.id === categorySelected}
+            onPress={() => setCategory(category.id)}
           />
         ))
       }
