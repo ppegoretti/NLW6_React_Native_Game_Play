@@ -4,13 +4,14 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 import { styles } from './styles'
 import PlayerSvg from '../../assets/player.svg'
+import CalendarSvg from '../../assets/calendar.svg'
 
 import { theme } from '../../global/styles/theme'
 import { AppointmentProps } from './types'
 
 import { RectButton } from 'react-native-gesture-handler'
 import { View, Text } from 'react-native'
-import { GuildIcon } from '..'
+import { GuildIcon } from '../'
 import { categories } from '../../utils/categories'
 // type BackgroundProps = {
 //   children: ReactNode
@@ -34,18 +35,26 @@ export function Appointment({ data, ...rest }: AppointmentProps) {
               {category.title}
             </Text>
           </View>
-          <View style={styles.playerInfo}>
-            <PlayerSvg fill={owner ? primary : on} />
-            <Text style={[
-              styles.player, { color: owner ? primary : on }
-            ]}>
-              {owner ? 'Anfitrião' : 'Visitante'}
-            </Text>
-          </View>
 
+          <View style={styles.footer}>
+            <View style={styles.dateInfo}>
+              <CalendarSvg />
+              <Text style={styles.date}>
+                {data.date}
+              </Text>
+            </View>
+            <View style={styles.playersInfo}>
+              <PlayerSvg fill={owner ? primary : on} />
+              <Text style={[
+                styles.player, { color: owner ? primary : on }
+              ]}>
+                {owner ? 'Anfitrião' : 'Visitante'}
+              </Text>
+            </View>
+          </View>
         </View>
       </View>
 
-    </RectButton>
+    </RectButton >
   )
 }

@@ -43,7 +43,8 @@ export function Home() {
             data={appointments}
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
-              <Appointment> {item.guild.name}</Appointment>
+              <Appointment data={item} />
+
             )} />
         </View>
       </View>

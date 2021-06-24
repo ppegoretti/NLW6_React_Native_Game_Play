@@ -2,11 +2,13 @@ import { ReactNode } from "react";
 import { RectButtonProps } from 'react-native-gesture-handler'
 
 export type GuildProps = {
-  owner: true;
+  id: string
   name: string
+  icon: null
+  owner: boolean;
 }
 
-export type dataProps = {
+export type DataProps = {
   id: string
   guild: GuildProps
   category: string
@@ -15,5 +17,5 @@ export type dataProps = {
 }
 
 export type AppointmentProps = RectButtonProps & {
-  data: dataProps
+  data: DataProps
 }
