@@ -8,4 +8,5 @@ export type CategoryProps = RectButtonProps & {
   title: string
   icon: React.FC<SvgProps>
   checked?: boolean
+  hasCheckedBox?: boolean
 }
