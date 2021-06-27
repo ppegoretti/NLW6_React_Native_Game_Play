@@ -1,12 +1,12 @@
 import { TouchableOpacityProps } from "react-native";
 
-export type dataProps = {
+export type GuildItensProps = TouchableOpacityProps & {
+  data: GuildProps
+}
+
+export type GuildProps = {
   id: string
   name: string
   icon: string | null
   owner: boolean
-}
-
-export type GuildProps = TouchableOpacityProps & {
-  data: dataProps
 }
