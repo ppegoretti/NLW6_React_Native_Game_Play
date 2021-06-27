@@ -17,9 +17,8 @@ export function ModalView({ children, ...rest }: ModalViewProps) {
       <View style={styles.overlay}>
         <View style={styles.container}>
           <Background>
-            <View style={styles.bar}>
-              {children}
-            </View>
+            <View style={styles.bar} />
+            {children}
           </Background>
         </View>
       </View>
