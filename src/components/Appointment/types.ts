@@ -4,7 +4,7 @@ import { RectButtonProps } from 'react-native-gesture-handler'
 export type GuildProps = {
   id: string
   name: string
-  icon: null
+  icon: string | null
   owner: boolean;
 }
 

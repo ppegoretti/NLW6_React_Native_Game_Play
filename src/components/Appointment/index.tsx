@@ -11,11 +11,8 @@ import { AppointmentProps } from './types'
 
 import { RectButton } from 'react-native-gesture-handler'
 import { View, Text } from 'react-native'
-import { GuildIcon } from '../'
+import { GuildIcon } from '../GuildIcon'
 import { categories } from '../../utils/categories'
-// type BackgroundProps = {
-//   children: ReactNode
-// }
 
 
 export function Appointment({ data, ...rest }: AppointmentProps) {
